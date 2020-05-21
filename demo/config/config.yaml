@@ -1,0 +1,23 @@
+site:
+  url: 'http://localhost/addon-php-content/demo/'
+
+addons:
+  activate:
+    - php-content
+
+theme:
+  activate:
+    - core/basic
+
+templates:
+  site:
+    name: Demo Leafcutter site
+
+cache:
+  driver: filesystem
+  directory: '${base_dir}/cache/'
+
+assets:
+  output:
+    directory: '${base_dir}/assets/'
+    url: '@/assets/'

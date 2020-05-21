@@ -1,0 +1,26 @@
+{
+    "name": "leafcutter/addon-php-content",
+    "description": "Addon to allow .php files to be executed to generate content.",
+    "extra": {
+        "leafcutter-addon": "Leafcutter\\Addons\\Leafcutter\\PHPContent\\Addon"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leafcutter\\Addons\\Leafcutter\\PHPContent\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joby Elliott",
+            "email": "code@byjoby.com"
+        }
+    ],
+    "license": "MIT",
+    "type": "leafcutter-addon",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "leafcutter/leafcutter": "dev-master",
+        "leafcutter/theme-core": "dev-master"
+    }
+}
