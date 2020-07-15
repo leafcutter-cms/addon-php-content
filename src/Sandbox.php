@@ -7,9 +7,9 @@ use Leafcutter\URL;
 
 class Sandbox
 {
-    private $file, $url, $leafcutter;
-    private $usedParams = [];
-    private $rawContentType = 'html';
+    protected $file, $url, $leafcutter;
+    protected $usedParams = [];
+    protected $rawContentType = 'html';
 
     public function __construct(string $file, URL $url, Leafcutter $leafcutter)
     {
