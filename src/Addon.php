@@ -13,6 +13,14 @@ class Addon extends \Leafcutter\Addons\AbstractAddon
      */
     const DEFAULT_CONFIG = [];
 
+    /**
+     * PHP content is executed immediately upon a page being generated, and
+     * doing it that way is necessary because of the fact that we want to
+     * enforce what URL parameters are allowed.
+     *
+     * @param PageFileEvent $e
+     * @return void
+     */
     public function onPageFile_php(PageFileEvent $e)
     {
         $sandbox = new Sandbox(

@@ -9,13 +9,14 @@ class Sandbox
 {
     private $file, $url, $leafcutter;
     private $usedParams = [];
+    private $rawContentType = 'html';
 
     public function __construct(string $file, URL $url, Leafcutter $leafcutter)
     {
         $this->file = $file;
         $this->url = $url;
         $this->leafcutter = $leafcutter;
-        $this->page = new Page($this->url, '');
+        $this->page = new Page($this->url);
         $this->page()->setDynamic(true);
     }
 
@@ -23,7 +24,7 @@ class Sandbox
     {
         ob_start();
         include $this->file();
-        $this->page()->setContent(ob_get_contents());
+        $this->page()->setRawContent(ob_get_contents(), $this->rawContentType);
         ob_end_clean();
         $url = $this->page()->url();
         $url->setQuery($this->usedParams());

@@ -1,5 +1,5 @@
 site:
-  url: 'http://localhost/addon-php-content/demo/'
+  url: 'http://leafcutter.test/addon-php-content/demo/'
 
 addons:
   activate:

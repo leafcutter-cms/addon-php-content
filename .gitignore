@@ -5,3 +5,4 @@
 !/demo/assets/README.md
 !/demo/cache/README.md
 /demo/debug.log
+env.yaml
