@@ -28,7 +28,6 @@ class Addon extends \Leafcutter\Addons\AbstractAddon
             $e->url(),
             $this->leafcutter
         );
-        $sandbox->execute();
         return $sandbox->page();
     }
 

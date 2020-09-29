@@ -16,7 +16,7 @@ class Sandbox
         $this->file = $file;
         $this->url = $url;
         $this->leafcutter = $leafcutter;
-        $this->page = new Page($this->url);
+        $this->page = new PHPPage($this->url,$this);
         $this->page()->setDynamic(true);
     }
 
