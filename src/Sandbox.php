@@ -31,7 +31,7 @@ class Sandbox
         $this->page()->setUrl($url);
     }
 
-    protected function file(): string
+    public function file(): string
     {
         return $this->file;
     }
