@@ -24,7 +24,7 @@ class PHPPage extends Page
                 $meta = Yaml::parse($match[1]);
                 $this->metaMerge($meta, true);
             } catch (\Throwable $th) {
-                Leafcutter::get()->logger()->error('Failed to parse meta yaml content for ' . $url);
+                Leafcutter::get()->logger()->notice('Failed to parse meta yaml content for PHPPage ' . $url);
             }
             return $match[0];
         }, file_get_contents($this->sandbox->file()));
