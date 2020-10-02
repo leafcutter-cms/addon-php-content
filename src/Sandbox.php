@@ -17,12 +17,12 @@ class Sandbox
         $this->url = $url;
         $this->leafcutter = $leafcutter;
         $this->page = new PHPPage($this->url,$this);
-        $this->page()->setDynamic(true);
     }
 
     public function execute()
     {
         ob_start();
+        $this->page->setDynamic(true);
         include $this->file();
         $this->page()->setRawContent(ob_get_contents(), $this->rawContentType);
         ob_end_clean();
